@@ -1,0 +1,25 @@
+/* Gravity Forms
+------------------------------------------------------------ */
+ div.gform_wrapper{
+   input,
+	 select,
+	 textarea {
+		 @include box-sizing(border-box);
+		 font-size: 14px !important;
+		 padding: 6px 10px !important;
+	 }
+	 .ginput_complex label {
+		 font-size: 14px;
+	 }
+	 li, form li {
+		 margin: 0 0 10px;
+	 }
+	 .gform_footer {
+		 border: none;
+		 margin: 0;
+		 padding: 0;
+		 input.button {
+			 color: #fff;
+		 }
+	 }
+ }
