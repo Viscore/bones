@@ -2,10 +2,12 @@
 GENERAL STYLES
 *********************/
 body {
-	font-family: $serif;
+	font-family: $helvetica;
 	font-size: 100%;
-	line-height: 1.5;
 	color: #565656;
+}
+.row {
+	max-width:75em; /* 1200 px */
 }
 /********************
 WORDPRESS BODY CLASSES
@@ -104,7 +106,6 @@ NAVIGATION STYLES
 	border: 1px solid #ccc;
 	border-bottom: 0;
 	li {
-
 		a {
 			display: block;
 			text-decoration: none;
@@ -136,6 +137,29 @@ NAVIGATION STYLES
 	li.current-page-ancestor {
 		a {}
 	}
+}
+/* Responsive Nav Plugin */
+#nav ul {
+  		margin: 0;
+  		padding: 0;
+ 	 	width: 100%;
+  		display: block;
+  		list-style: none;
+  		li {
+  			width: 100%;
+  			display: block;
+  		}
+	}
+.js #nav {
+  	clip: rect(0 0 0 0);
+  	max-height: 0;
+  	position: absolute;
+  	display: block;
+  	overflow: hidden;
+  	zoom: 1;
+}
+#nav.opened {
+  	max-height: 9999px;
 }
 /*********************
 POSTS & CONTENT STYLES

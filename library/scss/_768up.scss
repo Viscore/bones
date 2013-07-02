@@ -130,6 +130,16 @@ NAVIGATION STYLES
 		a {}
 	}  /* end current highlighters */
 
+	.js #nav {
+    	position: relative;
+  	}
+  	.js #nav.closed {
+    	max-height: none;
+  	}
+  	#nav-toggle {
+    	display: none;
+  	}
+
 } /* end .nav */
 
 /*********************

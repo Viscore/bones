@@ -13,51 +13,39 @@
 
 		<title><?php wp_title(''); ?></title>
 
-		<!-- mobile meta (hooray!) -->
 		<meta name="HandheldFriendly" content="True">
 		<meta name="MobileOptimized" content="320">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-		<!-- icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) -->
+		<meta name="geo.region" content="AU-VIC" />
+		<meta name="geo.placename" content="" />
+		<meta name="geo.position" content="[LAT];[LNG]" />
+		<meta name="ICBM" content="[LAT], [LNG]" />
 		<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/library/images/apple-icon-touch.png">
 		<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
-		<!--[if IE]>
-			<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
-		<![endif]-->
-		<!-- or, set /favicon.ico for IE10 win -->
 		<meta name="msapplication-TileColor" content="#f01d4f">
 		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
-
+		<!--[if lt IE 9]>
+			<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
+			<script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/library/js/libs/modernizr.custom.min.js?ver=2.6.2'></script>
+			<script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/library/js/libs/respond.min.js?ver=1.1.0'></script>
+		<![endif]-->
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-
-		<!-- wordpress head functions -->
 		<?php wp_head(); ?>
-		<!-- end of wordpress head -->
-
-		<!-- drop Google Analytics Here -->
-		<!-- end analytics -->
-
 	</head>
 
 	<body <?php body_class(); ?>>
-
-		<div id="container">
-
+		<div class="container">
 			<header class="header" role="banner">
-
-				<div id="inner-header" class="wrap clearfix">
-
-					<!-- to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> -->
-					<p id="logo" class="h1"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
-
-					<!-- if you'd like to use the site description you can un-comment it below -->
-					<?php // bloginfo('description'); ?>
-
-
-					<nav role="navigation">
-						<?php bones_main_nav(); ?>
-					</nav>
-
-				</div> <!-- end #inner-header -->
-
-			</header> <!-- end header -->
+				<div class="row">
+					<div class="large-4 columns">
+						<p id="logo" class="h1">
+							<a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a>
+						</p>
+					</div><!-- Large 4 -->
+					<div class="large-8 columns">
+						<nav role="navigation">
+							<?php viscore_main_nav(); ?>
+						</nav>
+					</div><!-- Large 8 -->
+				</div><!-- Row -->
+			</header><!-- Header -->
